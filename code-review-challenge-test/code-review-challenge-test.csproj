@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\coding-test-ranking\code-review-challenge.csproj" />
+    <ProjectReference Include="..\code-review-challenge\code-review-challenge.csproj" />
   </ItemGroup>
 
 </Project>
