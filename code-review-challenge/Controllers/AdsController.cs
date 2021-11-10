@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,20 +21,20 @@ namespace code_review_challenge.Controllers
 
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<QualityAd>> qualityListing()
+        public ActionResult<IEnumerable<QualityAd>> QualityListing()
         {
-            return adsService.findQualityAds();
+            return adsService.FindQualityAds();
         }
         [HttpGet]
-        public ActionResult<IEnumerable<PublicAd>> publicListing()
+        public ActionResult<IEnumerable<PublicAd>> PublicListing()
         {
-            return adsService.findPublicAds();
+            return adsService.FindPublicAds();
         }
 
         [HttpGet]
-        public ActionResult calculateScore()
+        public ActionResult CalculateScore()
         {
-            adsService.calculateScores();
+            adsService.CalculateScores();
             return Ok();
         }
     }
