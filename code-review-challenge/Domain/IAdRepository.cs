@@ -7,12 +7,12 @@ namespace code_review_challenge.Domain
 {
     public interface IAdRepository
     {
-        public List<Ad> findAllAds();
+        public List<Ad> FindAllAds();
 
-        public void save(Ad ad);
+        public void Save(Ad ad);
 
-        public List<Ad> findRelevantAds();
+        public List<Ad> FindRelevantAds();
 
-        public List<Ad> findIrrelevantAds();
+        public List<Ad> FindIrrelevantAds();
     }
 }
