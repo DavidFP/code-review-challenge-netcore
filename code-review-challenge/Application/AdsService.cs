@@ -26,7 +26,7 @@ namespace code_review_challenge.Application
                 publicAd.HouseSize=ad.HouseSize ?? 0;
                 publicAd.Id=ad.Id;
                 publicAd.PictureUrls = ad.Pictures.Select(p=>p.Url).ToList();
-                publicAd.Typology= nameof(ad.Typology);
+                publicAd.Typology= ad.Typology.ToString();
 
                 result.Add(publicAd);
             }
@@ -47,7 +47,7 @@ namespace code_review_challenge.Application
                 qualityAd.HouseSize = ad.HouseSize ?? 0;
                 qualityAd.Id = ad.Id;
                 qualityAd.PictureUrls = ad.Pictures.Select(p => p.Url).ToList();
-                qualityAd.Typology = nameof(ad.Typology);
+                qualityAd.Typology = ad.Typology.ToString();
                 qualityAd.Score = ad.Score;
                 qualityAd.IrrelevantSince = ad.IrrelevantSince.Value;
 
@@ -92,7 +92,7 @@ namespace code_review_challenge.Application
 
             if (description != null)
             {
-                if (string.IsNullOrWhiteSpace(description))
+                if (!string.IsNullOrWhiteSpace(description))
                 {
                     score += Constants.FIVE;
                 }
