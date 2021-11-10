@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -61,36 +61,11 @@ namespace code_review_challenge.Domain
 
         public bool isComplete()
         {
-            return (Typology.GARAGE.Equals(Typology) && !Pictures.Any())
-                    || (Typology.FLAT.Equals(Typology) && !Pictures.Any() && Description != null && !string.IsNullOrEmpty(Description) && HouseSize != null)
-                    || (Typology.CHALET.Equals(Typology) && !Pictures.Any() && Description != null && !string.IsNullOrEmpty(Description) && HouseSize != null && GardenSize != null);
+            return (Typology.GARAGE.Equals(Typology) && Pictures.Any())
+                    || (Typology.FLAT.Equals(Typology) && Pictures.Any() &&  !string.IsNullOrEmpty(Description) && HouseSize.HasValue)
+                    || (Typology.CHALET.Equals(Typology) && Pictures.Any() && !string.IsNullOrEmpty(Description) && HouseSize.HasValue && GardenSize.HasValue);
         }
 
-
-
-
-        public bool equals(object o)
-        {
-            if (this == o) return true;
-            if (o == null || GetType() != o.GetType()) return false;
-            Ad ad = (Ad)o;
-            return Equals(Id, ad.Id) && Typology == ad.Typology && Equals(Description, ad.Description) && Equals(Pictures, ad.Pictures) && Equals(HouseSize, ad.HouseSize) && Equals(GardenSize, ad.GardenSize) && Equals(Score, ad.Score) && Equals(IrrelevantSince, ad.IrrelevantSince);
-        }
-
-
-
-        public string toString()
-        {
-            return "Ad{" +
-                    "id=" + Id +
-                    ", typology=" + Typology +
-                    ", description='" + Description + '\'' +
-                    ", pictures=" + Pictures +
-                    ", houseSize=" + HouseSize +
-                    ", gardenSize=" + GardenSize +
-                    ", score=" + Score +
-                    ", irrelevantSince=" + IrrelevantSince +
-                    '}';
-        }
+        
     }
 }
