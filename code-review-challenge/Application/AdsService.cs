@@ -1,4 +1,4 @@
-﻿using code_review_challenge.Domain;
+using code_review_challenge.Domain;
 using code_review_challenge.infrastructure.api;
 using System;
 using System.Collections.Generic;
@@ -14,9 +14,9 @@ namespace code_review_challenge.Application
         {
             this.adRepository = adRepository;
         }
-        public List<PublicAd> findPublicAds()
+        public List<PublicAd> FindPublicAds()
         {
-            List<Ad> ads = adRepository.findRelevantAds();
+            List<Ad> ads = adRepository.FindRelevantAds();
             List<PublicAd> result = new List<PublicAd>();
             foreach(var ad in ads.OrderBy(p=>p.Score))
             {
@@ -34,9 +34,9 @@ namespace code_review_challenge.Application
         }
 
         
-        public List<QualityAd> findQualityAds()
+        public List<QualityAd> FindQualityAds()
         {
-            List<Ad> ads = adRepository.findIrrelevantAds();
+            List<Ad> ads = adRepository.FindIrrelevantAds();
 
             List<QualityAd> result = new List<QualityAd>();
             foreach (var ad in ads)
@@ -58,12 +58,12 @@ namespace code_review_challenge.Application
         }
 
         
-        public void calculateScores()
+        public void CalculateScores()
         {
-            adRepository.findAllAds().ForEach(calculateScore);
+            adRepository.FindAllAds().ForEach(CalculateScore);
         }
 
-        private void calculateScore(Ad ad)
+        private void CalculateScore(Ad ad)
         {
             int score = Constants.ZERO;
 
@@ -153,7 +153,7 @@ namespace code_review_challenge.Application
                 ad.SetIrrelevantSince(null);
             }
 
-            adRepository.save(ad);
+            adRepository.Save(ad);
         }
     }
 }
