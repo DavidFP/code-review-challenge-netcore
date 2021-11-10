@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.Extensions.Hosting;
+using code_review_challenge.Application;
 
 namespace code_review_challenge
 {
@@ -27,7 +28,7 @@ namespace code_review_challenge
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers(options => options.EnableEndpointRouting = false);
-            services.AddScoped<IAdsService, IAdsService>();
+            services.AddScoped<IAdsService, AdsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
