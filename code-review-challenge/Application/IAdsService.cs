@@ -7,8 +7,8 @@ using System.Collections.Generic;
 public interface IAdsService
 {
 
-	public List<PublicAd> findPublicAds();
-	public List<QualityAd> findQualityAds();
-	public void calculateScores();
+	public List<PublicAd> FindPublicAds();
+	public List<QualityAd> FindQualityAds();
+	public void CalculateScores();
 
 }
