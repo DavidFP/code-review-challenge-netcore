@@ -22,11 +22,11 @@ namespace code_review_challenge_test
         [Test]
         public void calculateScoresTest()
         {
-            adRepository.Setup(t => t.findAllAds()).Returns(new List<Ad> { irrelevantAd(), relevantAd() });
+            adRepository.Setup(t => t.FindAllAds()).Returns(new List<Ad> { irrelevantAd(), relevantAd() });
 
-            scoreService.calculateScores();
-            adRepository.Verify(t=>t.findAllAds(), Times.Once);
-            adRepository.Verify(t => t.save(It.IsAny<Ad>()), Times.Exactly(2));            
+            scoreService.CalculateScores();
+            adRepository.Verify(t=>t.FindAllAds(), Times.Once);
+            adRepository.Verify(t => t.Save(It.IsAny<Ad>()), Times.Exactly(2));            
         }
 
         private Ad relevantAd()

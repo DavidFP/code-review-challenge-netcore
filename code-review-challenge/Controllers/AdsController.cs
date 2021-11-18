@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using code_review_challenge.Application;
 using code_review_challenge.infrastructure.api;
 using Microsoft.AspNetCore.Mvc;
 
