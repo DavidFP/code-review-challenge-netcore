@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "code_review_challenge": {
+    "CodeReviewChallenge": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/values",

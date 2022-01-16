@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace code_review_challenge.infrastructure.api
+namespace CodeReviewChallenge.infrastructure.api
 {
     public class PublicAd
     {

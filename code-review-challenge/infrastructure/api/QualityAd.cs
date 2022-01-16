@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace code_review_challenge.infrastructure.api
+namespace CodeReviewChallenge.infrastructure.api
 {
     public class QualityAd
     {
@@ -14,6 +14,6 @@ namespace code_review_challenge.infrastructure.api
         public int HouseSize { get; set; }
         public int GardenSize { get; set; }
         public int Score { get; set; }
-        public DateTime IrrelevantSince { get; set; }
+        public DateTime? IrrelevantSince { get; set; }
     }
 }

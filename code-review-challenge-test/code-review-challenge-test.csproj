@@ -1,8 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>code_review_challenge_test</RootNamespace>
+    <RootNamespace>CodeReviewChallenge_test</RootNamespace>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
