@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <Folder Include="Infrastructure\Persistence\Interfaces\" />
+    <Folder Include="Application\Shared\" />
   </ItemGroup>
 
 </Project>
